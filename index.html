@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        background-image: url('FondoGM.jpg'); /* Reemplaza con la ruta correcta a tu imagen */
+        background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+        font-family: 'Playfair Display', serif; /* Fuente teatral elegante */
+        color: #060505; /* Texto blanco para resaltar en el fondo oscuro */
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap'); /* Fuente teatral elegante */
+
+    #logo{
+        background-image: url('logouniversitario.png');
+        padding: 80px; /* Espacio interior alrededor del contenido */
+        background-position: center; /* Centra la imagen en el div */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        border-bottom: 2px solid #ddd; /* Línea delgada en la parte inferior */
+    }
+    #descripcionPalabra {
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px;
+        max-width: 80%;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+<body>
+    <div id="logo"></div>
+    <h1>Si fallas, MORIRÁS..!!!!! jajajaja <img src="asesino.png" width="40" height="auto"> <img src="asesino.png" width="40" height="auto"> <img src="asesino.png" width="40" height="auto"> <img src="asesino.png" width="40" height="auto"> <img src="asesino.png" width="40" height="auto"></h1>
+    <div id="intentos">Tienes: 6</div></br>
+  
+    <div id="ahorcado-container">
+        <canvas id="ahorcado"></canvas>
+    <div style="padding: 20px;">
+        <img id="win-image" src="ganamos.gif" alt="Ganaste" style="display:none; width: 200px; margin-top: 20px;">
+        <img id="lose-image" src="perdimos-derrota.gif" alt="Perdiste" style="display:none; width: 200px; margin-top: 20px;">
+    </div>
+    </div>
+
+    <div id="palabra"></div>
+    <div id="descripcionPalabra"></div>
+    <div id="letras"></div>
+    <div id="resultado"></div>
+    <button id="reiniciar">SIGUIENTE</button>
+    
+    </div>
+    <audio id="suspense-sound" src="suspense.mp3" loop></audio>
+    <audio id="perdio-sound" src="perdiste.mp3" loop></audio>
+    <audio id="gano-sound" src="ganaste.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
